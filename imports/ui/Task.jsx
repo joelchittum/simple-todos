@@ -29,10 +29,10 @@ export default class Task extends Component {
 
         <table border="1">
           <tr>
-            <td>{this.props.task.text}</td>
-            <td>{this.props.task.aname}</td>
+            <td>{this.props.task.title}</td>
+            <td>{this.props.task.url}</td>
             <td>{this.props.task.createdAt}</td>
-            <td>{this.props.task.avalue}</td>
+            <td>{this.props.task.description}</td>
           </tr>
           &times;
         </table>
@@ -44,5 +44,7 @@ export default class Task extends Component {
 Task.propTypes = {
   // This component gets the task to display through a React prop.
   // We can use propTypes to indicate it is required
-  task: PropTypes.object.isRequired,
+  title: PropTypes.object.isRequired,
+  url: PropTypes.object.isRequired,
+  description: PropTypes.object.isRequired
 };
