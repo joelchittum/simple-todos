@@ -28,11 +28,11 @@ class App extends Component {
 				//Require entry in the title and the description
 				if(titleinput.length == 0)
 				{
-					ReactDOM.findDOMNode(this.refs.url).value = "No Title";
+					alert( "No Title" );
 				}
 				else if(descriptioninput.length == 0)
 				{
-					ReactDOM.findDOMNode(this.refs.description).value = "No description";
+					alert( "No description" );
 				}
 				else
 				{
@@ -46,12 +46,12 @@ class App extends Component {
 			}
 			else
 			{
-				ReactDOM.findDOMNode(this.refs.url).value = 'Malformed url try again';
+				alert( 'Malformed url try again Must be .com, .net or .edu' );
 			}
 		}
 		else
 		{
-			ReactDOM.findDOMNode(this.refs.url).value = 'Malformed url try again';
+			alert( 'Malformed url try again must contain http:// or https://' );
 		}
 
     	// Clear form
